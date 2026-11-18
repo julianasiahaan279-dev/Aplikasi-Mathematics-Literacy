@@ -1,0 +1,12 @@
+{
+  "name": "statistiku",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Aplikasi web pembelajaran Data dan Diagram Statistika kelas VIII dengan model Rigorous Mathematical Thinking dan tutor AI DeepSeek.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

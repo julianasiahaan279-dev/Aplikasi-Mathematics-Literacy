@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563EB">
+  <meta name="description" content="StatistiKu: belajar Data dan Diagram Statistika kelas VIII dengan model Rigorous Mathematical Thinking.">
+  <title>StatistiKu</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="layar" class="layar"></main>
+
+  <nav id="nav-bawah" class="nav-bawah" aria-label="Navigasi utama" hidden>
+    <a href="#/beranda" data-nav="beranda"><span aria-hidden="true">🏠</span>Beranda</a>
+    <a href="#/belajar" data-nav="belajar"><span aria-hidden="true">📘</span>Belajar</a>
+    <a href="#/latihan" data-nav="latihan"><span aria-hidden="true">✏️</span>Latihan</a>
+    <a href="#/hasil" data-nav="hasil"><span aria-hidden="true">📈</span>Hasil</a>
+  </nav>
+
+  <!-- Tutor AI (DeepSeek) -->
+  <button id="tutor-tombol" class="tutor-tombol" aria-controls="tutor-panel" aria-expanded="false" hidden>💬 Tutor</button>
+  <section id="tutor-panel" class="tutor-panel" aria-label="Tutor AI" hidden>
+    <header><strong>Tutor</strong><button id="tutor-tutup" class="ikon" aria-label="Tutup tutor">✕</button></header>
+    <div id="tutor-isi" class="tutor-isi" aria-live="polite"></div>
+    <form id="tutor-form" class="tutor-form">
+      <label for="tutor-input" class="sr-only">Tulis pertanyaanmu</label>
+      <input id="tutor-input" class="input" maxlength="500" placeholder="Tulis pertanyaanmu..." autocomplete="off">
+      <button class="tombol utama" type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <!-- Skrip biasa (bukan modul) agar index.html juga bisa dibuka langsung tanpa server -->
+  <script src="js/storage.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/tutor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

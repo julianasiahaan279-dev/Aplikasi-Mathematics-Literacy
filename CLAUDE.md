@@ -14,6 +14,7 @@
 | File | Isi | Kapan dibaca |
 |---|---|---|
 | PRD.md | Masalah, pengguna, fitur, kebutuhan | Sebelum menambah/mengubah fitur |
+| RMT.md | Model pembelajaran Rigorous Mathematical Thinking (WAJIB) | Sebelum merancang alur belajar & tutor AI |
 | PEDAGOGI_CLT.md | Teori beban kognitif & literasi matematis → fitur | Sebelum merancang interaksi |
 | DESAIN.md | Gaya visual, layout, komponen, aksesibilitas | Sebelum membuat UI |
 | ARSITEKTUR.md | Tech stack, struktur folder, data model | Sebelum membuat kode |
@@ -29,21 +30,18 @@
 5. **Setiap fitur harus bisa dijelaskan secara pedagogis** (lihat PEDAGOGI_CLT.md). Jika sebuah elemen UI tidak membantu belajar, jangan dibuat.
 6. **Bahasa antarmuka: Bahasa Indonesia** yang sederhana, kalimat pendek, cocok untuk siswa SMP. Komentar kode & nama variabel boleh Inggris.
 7. **Mobile-first:** uji tampilan di lebar 360 px dahulu.
-8. **Tanpa backend & tanpa akun di MVP.** Data progres disimpan di perangkat (localStorage). Jangan kumpulkan data pribadi siswa.
+8. **Tanpa akun.** Data progres disimpan di perangkat (localStorage). Jangan kumpulkan data pribadi siswa. Satu-satunya backend: `api/chat.js` (tutor AI DeepSeek); API key hanya di `.env`/Vercel, tidak boleh ada di kode frontend.
+12. **Model pembelajaran wajib RMT** (RMT.md): setiap modul punya Fase I, II, III dan layar refleksi; tutor AI tidak langsung memberi jawaban.
 9. **Jangan mengarang konten materi.** Isi materi dan soal mengikuti KONTEN_MATERI.md. Jika perlu soal baru, tandai `// TODO-VERIFIKASI` agar diperiksa pembuat.
 10. **Sebelum selesai:** jalankan lint, build, dan uji manual sesuai TESTING_EVALUASI.md.
 11. **Commit kecil dan sering** dengan pesan jelas (Bahasa Indonesia atau Inggris, konsisten).
 
-## 4. Tech Stack (ringkas; detail di ARSITEKTUR.md)
-React + TypeScript + Vite, Tailwind CSS, grafik SVG buatan sendiri (komponen kecil), vite-plugin-pwa, localStorage, deploy GitHub Pages/Vercel.
+## 4. Tech Stack
+Keputusan Fase 0: **HTML + CSS + JavaScript murni** (tanpa build, tanpa paket npm), grafik SVG buatan sendiri, localStorage, tutor AI lewat serverless function Vercel `api/chat.js` (DeepSeek, format OpenAI). Deploy: Vercel.
 
 ## 5. Perintah Umum (diisi setelah proyek dibuat)
 ```
-npm install      # pasang dependensi
-npm run dev      # jalankan lokal
-npm run build    # build produksi
-npm run lint     # cek kode
-npm run test     # uji unit
+npm start        # jalankan server lokal di http://localhost:3000 (butuh Node.js 18+ dan file .env)
 ```
 
 ## 6. Prinsip Desain Singkat
@@ -59,5 +57,6 @@ npm run test     # uji unit
 - Menghapus file perencanaan.
 
 ## 8. Catatan Status (perbarui tiap akhir sesi)
-- Fase saat ini: Fase 0 (perencanaan selesai, belum ada kode)
+- Fase saat ini: versi 0.2 — 7 modul RMT, pre/post-test, hasil + ekspor CSV, tutor AI DeepSeek sudah jalan.
+- Berikutnya: verifikasi konten (TODO-VERIFIKASI), salin teks pre-test asli dari Google Form, PWA/offline, uji siswa.
 - Keputusan terbuka: lihat bagian "Pertanyaan Terbuka" di PRD.md

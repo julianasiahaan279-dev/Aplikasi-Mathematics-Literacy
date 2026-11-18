@@ -17,53 +17,53 @@ Aturan: kerjakan **satu fase** per sesi. Centang `[x]` bila selesai. Claude Code
 - [ ] Review dokumen bersama dosen/teman; jawab "Pertanyaan Terbuka" di PRD.md
 - [ ] Pasang Node.js (LTS), Git, VS Code, Claude Code
 - [ ] Buat repo GitHub `statistiku`, unggah dokumen perencanaan
-- [ ] Tambah `.gitignore` dan README awal
-- [ ] Putuskan: React+Vite (disarankan) atau HTML murni
+- [x] Tambah `.gitignore` dan README awal
+- [x] Putuskan: React+Vite (disarankan) atau HTML murni
 
 ## Fase 1 — Fondasi UI
 - [ ] Inisialisasi Vite + React + TS + Tailwind
-- [ ] Atur token warna/tipografi sesuai DESAIN.md
-- [ ] Layout mobile + bilah navigasi bawah
+- [x] Atur token warna/tipografi sesuai DESAIN.md
+- [x] Layout mobile + bilah navigasi bawah
 - [ ] Routing: Sambutan, Beranda, Modul, Latihan, Hasil, Pengaturan
 - [ ] Komponen UI: Tombol, Kartu, ProgresBar, PanelUmpanBalik
 - [ ] Modul `storage.ts` + uji unitnya
-- [ ] Pengaturan: nama panggilan, ukuran huruf, hapus data
+- [x] Pengaturan: nama panggilan, ukuran huruf, hapus data
 - [ ] Setup lint, format, Vitest
 - **Selesai bila:** aplikasi kosong tapi berpindah layar, tampil rapi di 360 px
 
 ## Fase 2 — Grafik & Alat Bantu
 - [ ] `stats.ts` (jumlah, modus, selisih, persentase, sudut) + uji
-- [ ] Komponen `TabelData`
-- [ ] `DiagramBatang` (label langsung, ketuk tampilkan nilai)
-- [ ] `DiagramGaris` (penanda awal/akhir, panah waktu)
-- [ ] `DiagramLingkaran` (label sektor + persen)
-- [ ] `PenandaData` (centang + jumlah berjalan)
+- [x] Komponen `TabelData`
+- [x] `DiagramBatang` (label langsung, ketuk tampilkan nilai)
+- [x] `DiagramGaris` (penanda awal/akhir, panah waktu)
+- [x] `DiagramLingkaran` (label sektor + persen)
+- [x] `PenandaData` (centang + jumlah berjalan)
 - [ ] `KalkulatorMini`
-- [ ] `TombolHint` 3 tingkat + pencatatan
-- [ ] `LangkahContoh` (langkah demi langkah)
+- [x] `TombolHint` 3 tingkat + pencatatan
+- [x] `LangkahContoh` (langkah demi langkah)
 - [ ] Halaman demo komponen (untuk uji visual)
 - **Selesai bila:** semua diagram tampil benar dari data JSON dan dapat dibaca di 360 px
 
 ## Fase 3 — Konten & Modul
 - [ ] Skema JSON modul & soal (lihat ARSITEKTUR.md) + validator
-- [ ] Modul 2 (tabel+jumlah) lengkap
-- [ ] Modul 4 (garis+perubahan) lengkap
-- [ ] Modul 6 (memilih diagram) + komponen Pemilih Diagram
-- [ ] Modul 1 (kenalan data)
-- [ ] Modul 3 dan 5 (ringkas)
-- [ ] Modul 7 (soal literasi 4 tahap) + komponen soal bertahap
+- [x] Modul 2 (tabel+jumlah) lengkap
+- [x] Modul 4 (garis+perubahan) lengkap
+- [x] Modul 6 (memilih diagram) + komponen Pemilih Diagram
+- [x] Modul 1 (kenalan data)
+- [x] Modul 3 dan 5 (ringkas)
+- [x] Modul 7 (soal literasi 4 tahap) + komponen soal bertahap
 - [ ] ±12 soal literasi, hint, penjelasan
-- [ ] Skala usaha mental setelah tiap modul
+- [x] Skala usaha mental setelah tiap modul
 - [ ] Review konten oleh dosen/guru `[VERIFIKASI]`
 - **Selesai bila:** siswa dapat menyelesaikan semua modul dari awal sampai akhir
 
 ## Fase 4 — Tes, Adaptif, Hasil
-- [ ] Pre-test (10 soal) + layar hasil per topik
-- [ ] Post-test paralel
+- [x] Pre-test (10 soal) + layar hasil per topik
+- [x] Post-test paralel
 - [ ] Rekomendasi modul (`scoring.ts`) + uji
-- [ ] Pengurangan scaffolding setelah 3 benar berturut-turut
-- [ ] Layar Ringkasan Belajar (skor, topik, hint, waktu, skala usaha)
-- [ ] Ekspor CSV dan versi cetak/PDF
+- [x] Pengurangan scaffolding setelah 3 benar berturut-turut
+- [x] Layar Ringkasan Belajar (skor, topik, hint, waktu, skala usaha)
+- [x] Ekspor CSV dan versi cetak/PDF
 - **Selesai bila:** alur sambutan → pre-test → modul → post-test → hasil berjalan penuh
 
 ## Fase 5 — PWA, Uji, Rilis
@@ -84,3 +84,4 @@ Lainnya ditunda.
 | Tanggal | Yang dikerjakan | Masalah | Berikutnya |
 |---|---|---|---|
 | 13 Nov 2026 | Perencanaan (8 dokumen) | — | Review & Fase 0 |
+| 18 Nov 2026 | Versi 0.2: HTML murni, 7 modul alur RMT, pre/post-test, hasil + CSV, tutor AI DeepSeek (`api/chat.js`) | Teks pre-test asli belum disalin; soal baru perlu verifikasi | Verifikasi konten, PWA, deploy Vercel, uji siswa |
