@@ -78,7 +78,9 @@ Tanpa Node.js, `index.html` tetap bisa dibuka langsung (klik dua kali), tetapi t
 Soal bertanda `// TODO-VERIFIKASI` di `js/content.js` adalah soal baru dan perlu diperiksa. Teks pre-test perlu disamakan dengan soal asli di Google Form.
 
 ## Tautan Demo
-Belum tersedia.
+https://statistiku.vercel.app
+
+Aplikasi bisa dipasang seperti aplikasi biasa (PWA) dan tetap bisa dibuka saat offline. Catatan: tutor AI butuh koneksi internet dan saldo API DeepSeek, jadi bisa saja sedang tidak aktif.
 
 ## Pembuat
 Angelita Juliana Siahaan (2225250112)
