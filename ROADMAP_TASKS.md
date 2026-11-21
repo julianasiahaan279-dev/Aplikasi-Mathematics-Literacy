@@ -67,7 +67,7 @@ Aturan: kerjakan **satu fase** per sesi. Centang `[x]` bila selesai. Claude Code
 - **Selesai bila:** alur sambutan → pre-test → modul → post-test → hasil berjalan penuh
 
 ## Fase 5 — PWA, Uji, Rilis
-- [ ] vite-plugin-pwa, manifest, ikon, uji offline
+- [x] PWA: manifest, service worker, ikon, uji offline (HTML murni, tanpa vite-plugin-pwa)
 - [ ] Audit Lighthouse (Performa ≥ 90, Aksesibilitas ≥ 95)
 - [ ] Uji kegunaan dengan siswa (lihat TESTING_EVALUASI.md)
 - [ ] Perbaiki temuan uji
@@ -85,3 +85,4 @@ Lainnya ditunda.
 |---|---|---|---|
 | 13 Nov 2026 | Perencanaan (8 dokumen) | — | Review & Fase 0 |
 | 18 Nov 2026 | Versi 0.2: HTML murni, 7 modul alur RMT, pre/post-test, hasil + CSV, tutor AI DeepSeek (`api/chat.js`) | Teks pre-test asli belum disalin; soal baru perlu verifikasi | Verifikasi konten, PWA, deploy Vercel, uji siswa |
+| 21 Nov 2026 | Deploy Vercel (statistiku.vercel.app), PWA offline + ikon | Tutor AI belum jalan (saldo DeepSeek kosong) | Verifikasi konten, uji siswa, README lengkap, laporan |
