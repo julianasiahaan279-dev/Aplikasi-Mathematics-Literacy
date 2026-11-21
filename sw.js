@@ -1,4 +1,4 @@
-﻿const CACHE = 'statistiku-v1';
+﻿const CACHE = 'statistiku-v2';
 const FILES = [
   '/',
   '/index.html',
@@ -8,7 +8,8 @@ const FILES = [
   '/js/content.js',
   '/js/storage.js',
   '/js/tutor.js',
-  '/manifest.json'
+  '/manifest.json',
+  '/icon.svg'
 ];
 
 self.addEventListener('install', (e) => {
@@ -32,3 +33,4 @@ self.addEventListener('fetch', (e) => {
     caches.match(e.request).then((hit) => hit || fetch(e.request))
   );
 });
+
